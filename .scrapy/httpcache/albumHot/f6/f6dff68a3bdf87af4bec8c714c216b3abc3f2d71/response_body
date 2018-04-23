@@ -1,0 +1,442 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta name="baidu-site-verification" content="cNhJHKEzsD">
+<meta property="qc:admins" content="27354635321361636375">
+<link rel="canonical" href="https://music.163.com/discover/playlist/?cat=%E5%85%A8%E9%83%A8&amp;order=hot">
+<meta name="applicable-device" content="pc">
+<title>全部歌单 - 歌单 - 网易云音乐</title>
+<meta name="keywords" content="歌单，精选集，播放列表，网易云音乐，语种，场景，风格，情感，主题，华语，欧美，日语，韩语，粤语，小语种，流行，摇滚，民谣，电子，舞曲，说唱，轻音乐，爵士，乡村，R&amp;B/Soul，古典，民族，英伦，金属">
+<meta name="description" content="全部歌单。网易云音乐歌单，为你提供超过1000万个不同语种、场景、风格、情感、主题的歌单，众多明星DJ、音乐达人贡献优质歌单给你听。">
+<script type="text/javascript" async="" src="//wr.da.netease.com/ga.js"></script><script type="text/javascript">
+var GDownloadLink="";
+var GDevice = "phone";
+var GFrom="";
+var GClient="";
+var GPlatform="other";
+var GRef = '';
+var GInApp = false;
+var GMobile = false;
+var GAbroad = false;
+var GUser={};
+var GAllowRejectComment = false;
+var GEnc = true;
+var GEnvType = "online";
+var GWebpSupport = "1";
+window.NEJ_CONF = {p_csrf:{cookie:'__csrf',param:'csrf_token'}};
+//线上环境参数配置
+window.MUSIC_CONFIG = {
+pushHost:'web.push.126.net',
+pushPort:'6003',
+pushKey:'3b97981848064bbabeaaf2fb1eab7368'
+};
+GUtil = {
+getBase:function(){
+return location.protocol+'//'+location.hostname;
+},
+getPathAndHash:function(_url){//获取URL path 之后的所有内容,并将/#/替换成/m/使之成为path的一部分
+if(!_url) return '';
+var _reg0 = /^https?:\/\/.*?\//i,
+_reg1 = /\/?#\/?/i;
+return _url.replace(_reg0,'/').replace(_reg1,'/m/');
+},
+composeRefer:function(_url,_ref){//对所有的页面请求都加上ref参数表示被嵌套的来源
+if(!_ref) return _url;
+var _hi = _url.indexOf('#'),
+_si = _url.indexOf('?');
+if(_si>0&&(_si<_hi||_hi<0)){
+return _url.substring(0,_si+1)+'ref='+_ref+'&'+_url.substring(_si+1);
+}else if(_hi>0&&(_si<0||_si>_hi)){
+return _url.substring(0,_hi)+'?ref='+_ref+_url.substring(_hi);
+}else{
+return _url+'?ref='+_ref;
+}
+}
+};(function(){
+var _ua = window.navigator.userAgent,
+_isMobile = /(mobile|mobi|wap|iphone)/i.test(_ua),
+_isAndroid = /android/i.test(_ua),
+_isIpad = /(ipad)/i.test(_ua),
+_igList = [/^\/xiami$/,/^\/live$/],//不需要以单页面打开的列表，比如某些活动页面
+_pn = location.pathname,
+_idx = _pn.lastIndexOf('/'),
+_pReg = /\s*(\w+)\s*=\s*(\d+)\s*/,
+_redirect2mobile = function() {
+var _type,_murl,
+_id = 0,
+_hash = location.hash,
+_mReg = /^#\/?m?\/(share|song|playlist|djradio|dj|program|album|mv|artist|topic|radio|zysf|drqp|qp|activity|store|user|event|video|discover\/toplist)(\/(\d+))?/,
+_base = location.protocol+'//'+location.hostname,
+_sindex = _hash.lastIndexOf('?'),
+_search = _sindex>-1?_hash.substring(_sindex+1):'',
+_match = _mReg.exec(_hash);
+// 无hash || 不匹配 || 匹配但是商品之外不带参数 || 匹配且是排行榜
+if (!_hash.length || !_match || (_match[1] != 'store' && !_search) || /share|discover\/toplist/.test(_match[1])) {
+// 有hash && (没有参数 || 排行榜)
+if ((!_search || /share|discover\/toplist/.test(_match[1])) && _hash.length) {
+location.href = _base + '/' + _hash.replace('#', 'm');
+} else {
+location.href = _base + '/m/';
+}
+return;
+}
+_type = _match[1];
+_id = _match[3];
+if (_type == 'dj') _type = 'program';
+if (_type == 'store') {
+_murl = /^#\/store\/(product|concert)\/detail/.test(_hash) ? _hash.replace('#/store', '/store/m') : '/store/m/product/index';
+} else {
+_murl = '/' + _type + '?' + (_id ? 'id=' + _id + '&': '') + _search;
+}
+location.href = _base + _murl;
+};
+if(_isMobile || _isAndroid || _isIpad){
+_redirect2mobile();
+return;
+}
+if(!_pn||_pn=='/') return;
+for(var i in _igList){
+if(_igList[i].test(_pn)) return;
+}
+if(top==self){
+location.href = '/#'+GUtil.getPathAndHash(location.href);
+return;
+}
+//搜索引擎过来的内容页连接
+if(top==self&&/^\/static\/(song|playlist|album|artist)/i.test(_pn)){
+location.href = '/#'+_pn.substring(0,_idx).replace('/static/','/')+'?id='+_pn.substring(_idx+1);
+}
+})();
+(function(){
+var _addEvent = function(_node,_type,_cb){
+if(_node.addEventListener){
+_node.addEventListener(_type,_cb);
+}else if(_node.attachEvent){
+_node.attachEvent('on'+_type,_cb);
+}
+},
+_onAnchorClick = function(_event){//截获所有<a>标签的点击事件，自定义页面的跳转
+_event = _event||window.event;
+var _el = _event.target||_event.srcElement,
+_base = location.protocol+'//'+location.host;
+while(_el&&_el!=document){
+if(_el.tagName&&_el.tagName.toLowerCase()=='a'){
+//fix ie6下有时javascript:;不能阻止默认事件的bug.
+if(_el.href.indexOf('javascript:')>=0){
+!!_event.preventDefault
+? _event.preventDefault()
+: _event.returnValue = !1;
+return;
+}
+if(_event.button==2) return;//ff 右键会触发click事件
+//商城有独立地顶栏了，排除掉。但会员、数字专辑、单曲的商品、订单页仍保持主站frame，
+//这些url往往是通过/vip2, /payfee这样的地址跳转的，也没有问题，如果真的有，URL用#配置就好了
+var _path = _el.href.replace(/^https?:\/\/.*?\//i, '/').split(/[?#]/)[0];
+if(_path.indexOf('/store/')==0) return;
+if(_path.indexOf('/m/at/')==0) return;
+//新窗口打开的链接、云音乐单页面形式的链接、站外的链接不做拦截处理。
+if(_el.target=='_blank'
+||_el.target=='blank'
+||_isNotSameHost(_el.href)
+||_el.href==_base
+||_el.href.indexOf(_base+'/#')>=0) return;
+!!_event.preventDefault
+? _event.preventDefault()
+: _event.returnValue = !1;
+location.dispatch2(_el.href);
+break;
+}else{
+_el = _el.parentNode;
+}
+}
+},
+_isNotSameHost = function(_href){
+var _same = true;
+if(_href.charAt(0)!='/'){
+var _index = _href.indexOf('//'+location.hostname);
+if(_index > 0){
+var _index2 = _href.indexOf('?');
+if(_index2 > 0 && _index2 < _index){
+_same = false;
+}
+}else{
+_same = false;
+}
+}
+return !_same;
+};
+_addEvent(document,'click',_onAnchorClick);
+//扩展一个js中直接使用的页面跳转的方法，以拦截js中的页面跳转行为
+location.dispatch2 = function(_url,_replace){
+var delegate = false;
+try{
+delegate = !!top.GDispatcher;
+}catch(e){
+delegate = false;
+}
+if(delegate){
+top.GDispatcher.dispatch(_url,_replace);
+}else{
+_url = GUtil.composeRefer(_url,GRef);
+//邮箱音乐盒中，每次链接的跳转都要将proxy.html的地址合并到hash中
+if(GRef&&GRef=='mail'){
+var _hindex,_sindex,
+_reg = /(https?:\/\/.+\/proxy.html)/,
+_hreg = /#(.*?)$/,
+_href = decodeURIComponent(location.href);
+if(!_reg.test(decodeURIComponent(_url))&&_reg.test(_href)){
+_hindex = _url.indexOf('#');
+_sindex = _url.lastIndexOf('?');
+if(_hindex>0){
+_url = _url+(_sindex>_hindex?'&':'?')+'proxy='+encodeURIComponent(RegExp.$1);
+}else{
+_url = _url+'#proxy='+encodeURIComponent(RegExp.$1);
+}
+}
+}
+if(_replace){
+location.replace(_url);
+}else{
+location.href = _url;
+}
+}
+};
+})();(function(){
+if(window.addEventListener){
+window.addEventListener('scroll', onScroll)
+}else{
+window.attachEvent('onscroll', onScroll)
+}
+try{
+top.scrollTopbar(0);
+}catch(e){
+}
+function onScroll(){
+try{
+top.scrollTopbar(Math.max(document.body.scrollTop, document.documentElement.scrollTop));
+}catch(e){
+//ignore
+}
+};
+})();</script>
+<base href="//music.163.com/" target="_top">
+<link rel="shortcut icon" href="//s1.music.126.net/style/favicon.ico?v20180307">
+<link href="//s2.music.126.net/web/s/core.css?5c306f27b9753a7c3a7182b0fe39ece2" type="text/css" rel="stylesheet"><link href="//s2.music.126.net/web/s/pt_frame.css?bc92c173b27fe5fd56fa50e325a75e88" type="text/css" rel="stylesheet">
+</head>
+<body id="auto-id-76UP4946wTwVE2LJ">
+<div data-module="discover" data-sub="playlist" id="g_top" class="m-top">&nbsp;</div>
+<div id="g_nav" class="m-subnav">&nbsp;</div>
+<script>
+try{
+top.matchNav("discover", "playlist");
+}catch(e){
+}
+</script>
+<div class="g-bd" id="m-disc-pl-c">
+<div class="g-wrap p-pl f-pr">
+<div class="u-title f-cb">
+<h3><span class="f-ff2 d-flag">全部</span><a href="javascript:;" class="u-btn2 u-btn2-1 menu d-flag" id="cateToggleLink"><i>选择分类<em class="u-icn u-icn-38"></em></i></a></h3>
+<div class="u-btn f-fr u-btn-hot d-flag">
+<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8" class="a1" data-order="hot">热门</a>
+<a href="/discover/playlist/?order=new&amp;cat=%E5%85%A8%E9%83%A8" class="a2" data-order="new">最新</a>
+</div>
+</div>
+<div id="cateListBox" class="n-sltlyr d-flag " style="left:0;">
+<div class="hd"><i class="icn"></i></div>
+<div class="bd">
+<h3><a href="/discover/playlist/?order=hot" class="j-flag u-btn u-btn-g s-fc1" data-cat="全部"><em>全部风格</em></a></h3>
+<dl class="f-cb">
+<dt><i class="u-icn u-icn-71"></i>语种</dt>
+<dd>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%8D%8E%E8%AF%AD&amp;order=hot" data-cat="华语">华语</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%AC%A7%E7%BE%8E&amp;order=hot" data-cat="欧美">欧美</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%97%A5%E8%AF%AD&amp;order=hot" data-cat="日语">日语</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E9%9F%A9%E8%AF%AD&amp;order=hot" data-cat="韩语">韩语</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E7%B2%A4%E8%AF%AD&amp;order=hot" data-cat="粤语">粤语</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%B0%8F%E8%AF%AD%E7%A7%8D&amp;order=hot" data-cat="小语种">小语种</a><span class="line">|</span>
+</dd>
+</dl>
+<dl class="f-cb">
+<dt><i class="u-icn u-icn-6"></i>风格</dt>
+<dd>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%B5%81%E8%A1%8C&amp;order=hot" data-cat="流行">流行</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%91%87%E6%BB%9A&amp;order=hot" data-cat="摇滚">摇滚</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%B0%91%E8%B0%A3&amp;order=hot" data-cat="民谣">民谣</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E7%94%B5%E5%AD%90&amp;order=hot" data-cat="电子">电子</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E8%88%9E%E6%9B%B2&amp;order=hot" data-cat="舞曲">舞曲</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E8%AF%B4%E5%94%B1&amp;order=hot" data-cat="说唱">说唱</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E8%BD%BB%E9%9F%B3%E4%B9%90&amp;order=hot" data-cat="轻音乐">轻音乐</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E7%88%B5%E5%A3%AB&amp;order=hot" data-cat="爵士">爵士</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E4%B9%A1%E6%9D%91&amp;order=hot" data-cat="乡村">乡村</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=R%26B%2FSoul&amp;order=hot" data-cat="R&amp;B/Soul">R&amp;B/Soul</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%8F%A4%E5%85%B8&amp;order=hot" data-cat="古典">古典</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%B0%91%E6%97%8F&amp;order=hot" data-cat="民族">民族</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E8%8B%B1%E4%BC%A6&amp;order=hot" data-cat="英伦">英伦</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E9%87%91%E5%B1%9E&amp;order=hot" data-cat="金属">金属</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%9C%8B%E5%85%8B&amp;order=hot" data-cat="朋克">朋克</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E8%93%9D%E8%B0%83&amp;order=hot" data-cat="蓝调">蓝调</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E9%9B%B7%E9%AC%BC&amp;order=hot" data-cat="雷鬼">雷鬼</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E4%B8%96%E7%95%8C%E9%9F%B3%E4%B9%90&amp;order=hot" data-cat="世界音乐">世界音乐</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%8B%89%E4%B8%81&amp;order=hot" data-cat="拉丁">拉丁</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%8F%A6%E7%B1%BB%2F%E7%8B%AC%E7%AB%8B&amp;order=hot" data-cat="另类/独立">另类/独立</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=New%20Age&amp;order=hot" data-cat="New Age">New Age</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%8F%A4%E9%A3%8E&amp;order=hot" data-cat="古风">古风</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%90%8E%E6%91%87&amp;order=hot" data-cat="后摇">后摇</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=Bossa%20Nova&amp;order=hot" data-cat="Bossa Nova">Bossa Nova</a><span class="line">|</span>
+</dd>
+</dl>
+<dl class="f-cb">
+<dt><i class="u-icn u-icn-7"></i>场景</dt>
+<dd>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%B8%85%E6%99%A8&amp;order=hot" data-cat="清晨">清晨</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%A4%9C%E6%99%9A&amp;order=hot" data-cat="夜晚">夜晚</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%AD%A6%E4%B9%A0&amp;order=hot" data-cat="学习">学习</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%B7%A5%E4%BD%9C&amp;order=hot" data-cat="工作">工作</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%8D%88%E4%BC%91&amp;order=hot" data-cat="午休">午休</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E4%B8%8B%E5%8D%88%E8%8C%B6&amp;order=hot" data-cat="下午茶">下午茶</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%9C%B0%E9%93%81&amp;order=hot" data-cat="地铁">地铁</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E9%A9%BE%E8%BD%A6&amp;order=hot" data-cat="驾车">驾车</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E8%BF%90%E5%8A%A8&amp;order=hot" data-cat="运动">运动</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%97%85%E8%A1%8C&amp;order=hot" data-cat="旅行">旅行</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%95%A3%E6%AD%A5&amp;order=hot" data-cat="散步">散步</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E9%85%92%E5%90%A7&amp;order=hot" data-cat="酒吧">酒吧</a><span class="line">|</span>
+</dd>
+</dl>
+<dl class="f-cb">
+<dt><i class="u-icn u-icn-8"></i>情感</dt>
+<dd>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%80%80%E6%97%A7&amp;order=hot" data-cat="怀旧">怀旧</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%B8%85%E6%96%B0&amp;order=hot" data-cat="清新">清新</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%B5%AA%E6%BC%AB&amp;order=hot" data-cat="浪漫">浪漫</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%80%A7%E6%84%9F&amp;order=hot" data-cat="性感">性感</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E4%BC%A4%E6%84%9F&amp;order=hot" data-cat="伤感">伤感</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%B2%BB%E6%84%88&amp;order=hot" data-cat="治愈">治愈</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%94%BE%E6%9D%BE&amp;order=hot" data-cat="放松">放松</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%AD%A4%E7%8B%AC&amp;order=hot" data-cat="孤独">孤独</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%84%9F%E5%8A%A8&amp;order=hot" data-cat="感动">感动</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%85%B4%E5%A5%8B&amp;order=hot" data-cat="兴奋">兴奋</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%BF%AB%E4%B9%90&amp;order=hot" data-cat="快乐">快乐</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%AE%89%E9%9D%99&amp;order=hot" data-cat="安静">安静</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%80%9D%E5%BF%B5&amp;order=hot" data-cat="思念">思念</a><span class="line">|</span>
+</dd>
+</dl>
+<dl class="f-cb">
+<dt><i class="u-icn u-icn-9"></i>主题</dt>
+<dd class="last">
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%BD%B1%E8%A7%86%E5%8E%9F%E5%A3%B0&amp;order=hot" data-cat="影视原声">影视原声</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=ACG&amp;order=hot" data-cat="ACG">ACG</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%A0%A1%E5%9B%AD&amp;order=hot" data-cat="校园">校园</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%B8%B8%E6%88%8F&amp;order=hot" data-cat="游戏">游戏</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=70%E5%90%8E&amp;order=hot" data-cat="70后">70后</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=80%E5%90%8E&amp;order=hot" data-cat="80后">80后</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=90%E5%90%8E&amp;order=hot" data-cat="90后">90后</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E7%BD%91%E7%BB%9C%E6%AD%8C%E6%9B%B2&amp;order=hot" data-cat="网络歌曲">网络歌曲</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=KTV&amp;order=hot" data-cat="KTV">KTV</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E7%BB%8F%E5%85%B8&amp;order=hot" data-cat="经典">经典</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E7%BF%BB%E5%94%B1&amp;order=hot" data-cat="翻唱">翻唱</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%90%89%E4%BB%96&amp;order=hot" data-cat="吉他">吉他</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E9%92%A2%E7%90%B4&amp;order=hot" data-cat="钢琴">钢琴</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%99%A8%E4%B9%90&amp;order=hot" data-cat="器乐">器乐</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E5%84%BF%E7%AB%A5&amp;order=hot" data-cat="儿童">儿童</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=%E6%A6%9C%E5%8D%95&amp;order=hot" data-cat="榜单">榜单</a><span class="line">|</span>
+<a class="s-fc1 " href="/discover/playlist/?cat=00%E5%90%8E&amp;order=hot" data-cat="00后">00后</a><span class="line">|</span>
+</dd>
+</dl>
+</div>
+<div class="ft"></div>
+</div>
+<ul class="m-cvrlst f-cb" id="m-pl-container">
+<li>
+<div class="u-cover u-cover-1">
+<img class="j-flag" src="http://p1.music.126.net/2WZ7fdpeUv5vs9uLARuPEg==/18528969953491169.jpg?param=140y140">
+<a title="临沂大学2018运动会燃到爆歌单" href="/playlist?id=2192178077" class="msk"></a>
+<div class="bottom">
+<a class="icon-play f-fr" title="播放" href="javascript:;" data-res-type="13" data-res-id="2192178077" data-res-action="play"></a>
+<span class="icon-headset"></span>
+<span class="nb">77421</span>
+</div>
+</div>
+<p class="dec">
+<a title="临沂大学2018运动会燃到爆歌单" href="/playlist?id=2192178077" class="tit f-thide s-fc0">临沂大学2018运动会燃到爆歌单</a>
+</p>
+<p><span class="s-fc4">by</span> <a title="刘益达啊" href="/user/home?id=495082540" class="nm nm-icn f-thide s-fc3">刘益达啊</a> </p>
+</li>
+</ul>
+<div id="m-pl-pager"> <div class="u-page">
+<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=1&amp;offset=7" class="zbtn zprv">上一页</a>
+<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=1&amp;offset=0" class="zpgi">1</a>
+<span class="zdot">...</span>
+<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=1&amp;offset=5" class="zpgi">6</a>
+<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=1&amp;offset=6" class="zpgi">7</a>
+<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=1&amp;offset=7" class="zpgi">8</a>
+<a href="javascript:void(0)" class="zpgi js-selected">9</a>
+<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=1&amp;offset=9" class="zpgi">10</a>
+<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=1&amp;offset=10" class="zpgi">11</a>
+<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=1&amp;offset=11" class="zpgi">12</a>
+<span class="zdot">...</span>
+<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=1&amp;offset=1300" class="zpgi">1301</a>
+<a href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=1&amp;offset=9" class="zbtn znxt">下一页</a>
+</div>
+</div>
+</div>
+</div>
+<div class="g-ft ">
+<div class="m-ft">
+<div class="wrap f-cb">
+<div class="copy">
+<p>
+<a href="//music.163.com/about" target="_blank" class="s-fc4">关于网易</a><span class="line">|</span>
+<a href="//help.163.com/" target="_blank" class="s-fc4">客户服务</a><span class="line">|</span>
+<a href="//music.163.com/html/web2/service.html" target="_blank" class="s-fc4">服务条款</a><span class="line">|</span>
+<a href="//sitemap.163.com/" target="_blank" class="s-fc4">网站导航</a><span class="line">|</span>
+<a id="g_feedback" href="#" class="s-fc4" onclick="nm.x.feedback();return false;" hidefocus="true">意见反馈</a>
+</p>
+<p class="s-fc3">
+<span class="sep">网易公司版权所有©1997-2018</span>杭州乐读科技有限公司运营：<a href="http://p1.music.126.net/-DB9zs1FAJq8vg7HOb-yOQ==/3250156395654666.jpg" target="_blank" class="s-fc3">浙网文[2015] 0415-135号</a>
+</p>
+<p class="s-fc3">
+<span class="sep">违法和不良信息举报电话：0571-89853516</span>
+举报邮箱：<a href="mailto:cloudmusicservice@163.com">cloudmusicservice@163.com</a>
+</p>
+</div>
+<ul class="enter f-fr">
+<li>
+<a class="logo logo-musician f-tid" href="//music.163.com/recruit" target="_blank">独立音乐人</a>
+</li>
+<li>
+<a class="logo logo-topic f-tid" href="//music.163.com/topic/recruit" target="_blank">音乐专栏</a>
+</li>
+<li>
+<a class="logo logo-midea f-tid" href="//music.163.com/topic/selfmedia" target="_blank">自媒体</a>
+</li>
+<li>
+<a class="logo logo-reward f-tid" href="//music.163.com/web/reward" target="_blank">赞赏</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a title="回到顶部" class="m-back" href="#" id="g_backtop" hidefocus="true" style="display: none;">回到顶部</a>
+
+<script src="//s3.music.126.net/web/s/core.js?07660f37992222fce4cc4e5591c0ccef" type="text/javascript"></script><iframe frameborder="0" id="auto-id-bZmDzNteBJHWmFvu" style="display: none;" src="about:blank"></iframe><script src="//s3.music.126.net/web/s/pt_discover_playlist.js?802444bfba087a61b8ff62fce75d259f" type="text/javascript"></script>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-38766552-1'],['_setLocalGifPath', '/UA-38766552-1/__utm.gif'],['_setLocalRemoteServerMode']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script');
+ga.type = 'text/javascript';
+ga.async = true;
+ga.src = '//wr.da.netease.com/ga.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s);
+})();//fix ipad下的一个bug
+if (navigator.userAgent.indexOf('iPad') != -1) {
+iframeHeight = Math.max(
+Math.max(document.body.scrollHeight, document.documentElement.scrollHeight),
+Math.max(document.body.offsetHeight, document.documentElement.offsetHeight),
+Math.max(document.body.clientHeight, document.documentElement.clientHeight)
+);
+top.document.body.style.height = iframeHeight + 20 + 'px';
+}</script>
+</body></html>

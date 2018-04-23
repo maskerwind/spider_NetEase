@@ -1,0 +1,507 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta name="baidu-site-verification" content="cNhJHKEzsD">
+<meta property="qc:admins" content="27354635321361636375">
+<link rel="canonical" href="https://music.163.com/song?id=487379098">
+<meta name="applicable-device" content="pc">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://music.163.com/m/song?id=487379098">
+<meta name="mobile-agent" content="format=html5;url=https://music.163.com/m/song?id=487379098">
+<title>你一定要是个孩子（电影《大护法》主题曲） - 蔡琴 - 单曲 - 网易云音乐</title>
+<meta name="keywords" content="你一定要是个孩子，电影《大护法》主题曲，你一定要是个孩子，蔡琴">
+<meta name="description" content="歌手：蔡琴。所属专辑：你一定要是个孩子。">
+<script type="text/javascript" async="" src="//wr.da.netease.com/ga.js"></script><script type="application/ld+json">
+{
+"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+"@id": "http://music.163.com/song?id=487379098",
+"appid": "1582028769404989",
+"title": "你一定要是个孩子（电影《大护法》主题曲）",
+"images": ["http://p1.music.126.net/tXhCDUDUCbKH4VbAF6a5Aw==/18753270325309495.jpg"],
+"description": "歌手：蔡琴。所属专辑：你一定要是个孩子。",
+"pubDate": "2017-06-30T00:00:00"
+}
+</script>
+<script type="text/javascript">
+var GDownloadLink="";
+var GDevice = "phone";
+var GFrom="";
+var GClient="";
+var GPlatform="other";
+var GRef = '';
+var GInApp = false;
+var GMobile = false;
+var GAbroad = false;
+var GUser={};
+var GAllowRejectComment = false;
+var GEnc = true;
+var GEnvType = "online";
+var GWebpSupport = "1";
+window.NEJ_CONF = {p_csrf:{cookie:'__csrf',param:'csrf_token'}};
+//线上环境参数配置
+window.MUSIC_CONFIG = {
+pushHost:'web.push.126.net',
+pushPort:'6003',
+pushKey:'3b97981848064bbabeaaf2fb1eab7368'
+};
+GUtil = {
+getBase:function(){
+return location.protocol+'//'+location.hostname;
+},
+getPathAndHash:function(_url){//获取URL path 之后的所有内容,并将/#/替换成/m/使之成为path的一部分
+if(!_url) return '';
+var _reg0 = /^https?:\/\/.*?\//i,
+_reg1 = /\/?#\/?/i;
+return _url.replace(_reg0,'/').replace(_reg1,'/m/');
+},
+composeRefer:function(_url,_ref){//对所有的页面请求都加上ref参数表示被嵌套的来源
+if(!_ref) return _url;
+var _hi = _url.indexOf('#'),
+_si = _url.indexOf('?');
+if(_si>0&&(_si<_hi||_hi<0)){
+return _url.substring(0,_si+1)+'ref='+_ref+'&'+_url.substring(_si+1);
+}else if(_hi>0&&(_si<0||_si>_hi)){
+return _url.substring(0,_hi)+'?ref='+_ref+_url.substring(_hi);
+}else{
+return _url+'?ref='+_ref;
+}
+}
+};(function(){
+var _ua = window.navigator.userAgent,
+_isMobile = /(mobile|mobi|wap|iphone)/i.test(_ua),
+_isAndroid = /android/i.test(_ua),
+_isIpad = /(ipad)/i.test(_ua),
+_igList = [/^\/xiami$/,/^\/live$/],//不需要以单页面打开的列表，比如某些活动页面
+_pn = location.pathname,
+_idx = _pn.lastIndexOf('/'),
+_pReg = /\s*(\w+)\s*=\s*(\d+)\s*/,
+_redirect2mobile = function() {
+var _type,_murl,
+_id = 0,
+_hash = location.hash,
+_mReg = /^#\/?m?\/(share|song|playlist|djradio|dj|program|album|mv|artist|topic|radio|zysf|drqp|qp|activity|store|user|event|video|discover\/toplist)(\/(\d+))?/,
+_base = location.protocol+'//'+location.hostname,
+_sindex = _hash.lastIndexOf('?'),
+_search = _sindex>-1?_hash.substring(_sindex+1):'',
+_match = _mReg.exec(_hash);
+// 无hash || 不匹配 || 匹配但是商品之外不带参数 || 匹配且是排行榜
+if (!_hash.length || !_match || (_match[1] != 'store' && !_search) || /share|discover\/toplist/.test(_match[1])) {
+// 有hash && (没有参数 || 排行榜)
+if ((!_search || /share|discover\/toplist/.test(_match[1])) && _hash.length) {
+location.href = _base + '/' + _hash.replace('#', 'm');
+} else {
+location.href = _base + '/m/';
+}
+return;
+}
+_type = _match[1];
+_id = _match[3];
+if (_type == 'dj') _type = 'program';
+if (_type == 'store') {
+_murl = /^#\/store\/(product|concert)\/detail/.test(_hash) ? _hash.replace('#/store', '/store/m') : '/store/m/product/index';
+} else {
+_murl = '/' + _type + '?' + (_id ? 'id=' + _id + '&': '') + _search;
+}
+location.href = _base + _murl;
+};
+if(_isMobile || _isAndroid || _isIpad){
+_redirect2mobile();
+return;
+}
+if(!_pn||_pn=='/') return;
+for(var i in _igList){
+if(_igList[i].test(_pn)) return;
+}
+if(top==self){
+location.href = '/#'+GUtil.getPathAndHash(location.href);
+return;
+}
+//搜索引擎过来的内容页连接
+if(top==self&&/^\/static\/(song|playlist|album|artist)/i.test(_pn)){
+location.href = '/#'+_pn.substring(0,_idx).replace('/static/','/')+'?id='+_pn.substring(_idx+1);
+}
+})();
+(function(){
+var _addEvent = function(_node,_type,_cb){
+if(_node.addEventListener){
+_node.addEventListener(_type,_cb);
+}else if(_node.attachEvent){
+_node.attachEvent('on'+_type,_cb);
+}
+},
+_onAnchorClick = function(_event){//截获所有<a>标签的点击事件，自定义页面的跳转
+_event = _event||window.event;
+var _el = _event.target||_event.srcElement,
+_base = location.protocol+'//'+location.host;
+while(_el&&_el!=document){
+if(_el.tagName&&_el.tagName.toLowerCase()=='a'){
+//fix ie6下有时javascript:;不能阻止默认事件的bug.
+if(_el.href.indexOf('javascript:')>=0){
+!!_event.preventDefault
+? _event.preventDefault()
+: _event.returnValue = !1;
+return;
+}
+if(_event.button==2) return;//ff 右键会触发click事件
+//商城有独立地顶栏了，排除掉。但会员、数字专辑、单曲的商品、订单页仍保持主站frame，
+//这些url往往是通过/vip2, /payfee这样的地址跳转的，也没有问题，如果真的有，URL用#配置就好了
+var _path = _el.href.replace(/^https?:\/\/.*?\//i, '/').split(/[?#]/)[0];
+if(_path.indexOf('/store/')==0) return;
+if(_path.indexOf('/m/at/')==0) return;
+//新窗口打开的链接、云音乐单页面形式的链接、站外的链接不做拦截处理。
+if(_el.target=='_blank'
+||_el.target=='blank'
+||_isNotSameHost(_el.href)
+||_el.href==_base
+||_el.href.indexOf(_base+'/#')>=0) return;
+!!_event.preventDefault
+? _event.preventDefault()
+: _event.returnValue = !1;
+location.dispatch2(_el.href);
+break;
+}else{
+_el = _el.parentNode;
+}
+}
+},
+_isNotSameHost = function(_href){
+var _same = true;
+if(_href.charAt(0)!='/'){
+var _index = _href.indexOf('//'+location.hostname);
+if(_index > 0){
+var _index2 = _href.indexOf('?');
+if(_index2 > 0 && _index2 < _index){
+_same = false;
+}
+}else{
+_same = false;
+}
+}
+return !_same;
+};
+_addEvent(document,'click',_onAnchorClick);
+//扩展一个js中直接使用的页面跳转的方法，以拦截js中的页面跳转行为
+location.dispatch2 = function(_url,_replace){
+var delegate = false;
+try{
+delegate = !!top.GDispatcher;
+}catch(e){
+delegate = false;
+}
+if(delegate){
+top.GDispatcher.dispatch(_url,_replace);
+}else{
+_url = GUtil.composeRefer(_url,GRef);
+//邮箱音乐盒中，每次链接的跳转都要将proxy.html的地址合并到hash中
+if(GRef&&GRef=='mail'){
+var _hindex,_sindex,
+_reg = /(https?:\/\/.+\/proxy.html)/,
+_hreg = /#(.*?)$/,
+_href = decodeURIComponent(location.href);
+if(!_reg.test(decodeURIComponent(_url))&&_reg.test(_href)){
+_hindex = _url.indexOf('#');
+_sindex = _url.lastIndexOf('?');
+if(_hindex>0){
+_url = _url+(_sindex>_hindex?'&':'?')+'proxy='+encodeURIComponent(RegExp.$1);
+}else{
+_url = _url+'#proxy='+encodeURIComponent(RegExp.$1);
+}
+}
+}
+if(_replace){
+location.replace(_url);
+}else{
+location.href = _url;
+}
+}
+};
+})();(function(){
+if(window.addEventListener){
+window.addEventListener('scroll', onScroll)
+}else{
+window.attachEvent('onscroll', onScroll)
+}
+try{
+top.scrollTopbar(0);
+}catch(e){
+}
+function onScroll(){
+try{
+top.scrollTopbar(Math.max(document.body.scrollTop, document.documentElement.scrollTop));
+}catch(e){
+//ignore
+}
+};
+})();</script>
+<base href="//music.163.com/" target="_top">
+<link rel="shortcut icon" href="//s1.music.126.net/style/favicon.ico?v20180307">
+<link href="//s2.music.126.net/web/s/core.css?5c306f27b9753a7c3a7182b0fe39ece2" type="text/css" rel="stylesheet"><link href="//s2.music.126.net/web/s/pt_frame.css?bc92c173b27fe5fd56fa50e325a75e88" type="text/css" rel="stylesheet">
+<style type="text/css">.auto-1524468761312{position:fixed;_position:absolute;z-index:100;top:0;bottom:0;left:0;right:0;width:100%;height:100%;background-image:url(data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==);}.auto-1524468761313{position:absolute;z-index:1000;border:1px solid #aaa;background:#fff;}.auto-1524468761313 .zbar{line-height:30px;background:#8098E7;border-bottom:1px solid #aaa;}.auto-1524468761313 .zcnt{padding:10px 5px;}.auto-1524468761313 .zttl{margin-right:20px;text-align:left;}.auto-1524468761313 .zcls{position:absolute;top:5px;right:0;width:20px;height:20px;line-height:20px;cursor:pointer;}.auto-1524468761314{position:absolute;background:#fff;}.auto-1524468761315{font-size:12px;line-height:160%;}.auto-1524468761315 a{margin:0 2px;padding:2px 8px;color:#333;border:1px solid #aaa;text-decoration:none;}.auto-1524468761315 .js-disabled{cursor:default;}.auto-1524468761315 .js-selected{cursor:default;background:#bbb;}.j-item.j-selected a{background:#eee;text-decoration:none;color:#333;}.u-atlist{position: absolute;z-index: 10000;}.f-thide.selected-item{background-color: #eee;}#shadow-box{position: absolute;display: block;left: 450px;top: 1020px;border: 1px solid black;word-wrap: break-word;display:none;opacity: 0;filter: Alpha(opacity=0);z-index: -1000;}</style><script src="https://rec.g.163.com/kaolaadclick/api/dsp/show.s?uuid=b01a9b4687974911a92fc7c0a65d44de_1&amp;posid=netease_music_detail_logo200x220_1&amp;timestamp=1524468762269&amp;prod=adbid"></script><script type="text/javascript" charset="UTF-8" async="" src="http://acstatic-dun.126.net/2.1.0_89b6078b/watchman.min.js"></script></head>
+<body id="auto-id-2zc7g7pdTo3HvTyb" class="auto-1524468761318-parent">
+<div data-module="discover" data-sub="other" id="g_top" class="m-top">&nbsp;</div>
+<div id="g_nav" class="m-subnav">&nbsp;</div>
+<script>
+try{
+top.matchNav("discover", "other");
+}catch(e){
+}
+</script>
+<div class="g-bd4 f-cb">
+<div class="g-mn4">
+<div class="g-mn4c">
+<div class="g-wrap6">
+<div class="m-lycifo">
+<div class="f-cb">
+<div class="cvrwrap f-cb f-pr">
+<div class="u-cover u-cover-6 f-fl">
+<img src="http://p1.music.126.net/tXhCDUDUCbKH4VbAF6a5Aw==/18753270325309495.jpg?param=130y130" class="j-img" data-src="http://p1.music.126.net/tXhCDUDUCbKH4VbAF6a5Aw==/18753270325309495.jpg">
+<span class="msk f-alpha"></span>
+</div>
+<div class="out s-fc3">
+<i class="u-icn u-icn-95 f-fl"></i>
+<a data-action="outchain" data-rt="" data-href="/outchain/2/487379098/" class="des s-fc7">生成外链播放器</a>
+</div>
+</div>
+<div class="cnt">
+<div class="hd">
+<i class="lab u-icn u-icn-37"></i>
+<div class="tit">
+<em class="f-ff2">你一定要是个孩子</em>
+<div class="subtit f-fs1 f-ff2">电影《大护法》主题曲</div>
+</div>
+</div>
+<p class="des s-fc4">歌手：<span title="蔡琴"><a class="s-fc7" href="/artist?id=7220">蔡琴</a></span></p>
+<p class="des s-fc4">所属专辑：<a href="/album?id=35688289" class="s-fc7">你一定要是个孩子</a></p>
+<div class="m-info">
+<div id="content-operation" class="btns f-cb" data-rid="487379098" data-type="18">
+<a data-res-action="play" data-res-id="487379098" data-res-type="18" href="javascript:;" class="u-btn2 u-btn2-2 u-btni-addply f-fl" hidefocus="true" title="播放"><i><em class="ply"></em>播放</i></a>
+<a data-res-action="addto" data-res-id="487379098" data-res-type="18" href="javascript:;" class="u-btni u-btni-add" hidefocus="true" title="添加到播放列表"></a>
+<a data-res-id="487379098" data-res-type="18" data-count="-1" data-fee="0" data-payed="0" data-pl="320000" data-dl="320000" data-cp="1" data-toast="false" data-st="0" data-res-action="fav" class="u-btni u-btni-fav " href="javascript:;">
+<i>收藏</i>
+</a>
+<a data-res-id="487379098" data-res-type="18" data-count="-1" data-res-action="share" data-res-name="你一定要是个孩子" data-res-author="蔡琴" data-res-authors="" data-res-pic="" class="u-btni u-btni-share " href="javascript:;"><i>分享</i></a>
+<a data-res-id="487379098" data-res-type="18" data-res-action="download" class="u-btni u-btni-dl " href="javascript:;"><i>下载</i></a>
+<a data-res-action="comment" href="javascript:;" class="u-btni u-btni-cmmt "><i>(<span id="cnt_comment_count">10151</span>)</i></a>
+</div>
+</div>
+<div id="lyric-content" class="bd bd-open f-brk f-ib" data-song-id="487379098" data-third-copy="false" ,="" copy-from="">作曲 : 窦鹏<br>作词 : 不思凡<br>编曲：窦鹏<br>制作人：窦鹏<br>音乐制作助理：徐晓宇<br><br>你像个孩子<br>那么任性的<br>想要寻找美丽他乡<br>你像个孩子<br>那么倔强着<br>路尽头过不去的高墙<br>像个孩子<br><div id="flag_more" class="f-hide">闪着的泪光<br>沉默着看向远方<br>美丽的幻想<br>是生命的花<br>想要绚丽<br>想要盛情绽放<br>你一定要是一个孩子<br>任野风吹不动你的坚强<br>我为你包扎心伤<br>任大雨黑夜彷徨<br>暗不下你守护着的光<br><br>我想你永远是个孩子<br>等你亮满了天空的光<br>你看到我的爱吗<br>洒亮在你的脸庞<br>我看着你<br>泪盈眶<br>像个孩子<br>永远坚强着<br>生命的花盛情绽放<br>你飞向远方<br>自由的翱翔<br>给你全部  我才退场<br>给你全部 我才退场<br></div><div class="crl"><a id="flag_ctrl" href="javascript:void(0)" class="s-fc7">展开<i class="u-icn u-icn-69"></i></a></div></div>
+</div>
+</div>
+<div id="user-operation" class="lrc-user"><p><a class="f-tdu s-fc4" href="/lyric/report?id=487379098">报错</a></p><p class="s-fc3"></p><!--#if--></div>
+</div>
+<div class="n-cmt" id="comment-box" data-tid="R_SO_4_487379098" data-count="0"><div id="auto-id-PKnA0Idma3XaE631"><div class="u-title u-title-1">
+<h3><span class="f-ff2">评论</span></h3><span class="sub s-fc3">共<span class="j-flag">10151</span>条评论</span>
+</div>
+<div class="m-cmmt">
+<div class="iptarea">
+<div class="head"><img src="http://s4.music.126.net/style/web2/img/default/default_avatar.jpg?param=50y50"></div>
+<div class="j-flag"><div><div class="m-cmmtipt f-cb f-pr"><div class="u-txtwrap holder-parent f-pr" style="display: block;"><textarea class="u-txt area j-flag" data-type="" placeholder="评论" id="auto-id-K68BS9vUOOKosl8L"></textarea></div><div class="btns f-cb f-pr"><i class="icn u-icn u-icn-36 j-flag" id="auto-id-Ityay21cMXqdMLsK"></i><i class="icn u-icn u-icn-41 j-flag" id="auto-id-JkqZbikBeJcQtJJ0"></i><a href="javascript:void(0)" class="btn u-btn u-btn-1 j-flag" id="auto-id-JfFftg2wBVefqWu4">评论</a><span class="zs s-fc4 j-flag">140</span></div><div class="corr u-arr"><em class="arrline">◆</em><span class="arrclr">◆</span></div></div></div></div>
+</div>
+<div class="cmmts j-flag" id="auto-id-M4Oyw765mmdmRuOl"><h3 class="u-hd4">精彩评论</h3> <div id="4563346391524468761317" class="itm" data-id="456334639"><div class="head"><a href="/user/home?id=86948771"><img src="http://p1.music.126.net/GidlpAqbbpZ_i2MRWUkqzw==/109951163166006308.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=86948771" class="s-fc7">双刀燕小六</a>：《大护法》这部电影，从关注导演不思凡开始，我就一直追逐着它的动态。仅仅是最初的一些概念画就足以让我心动，黑暗、暴力、血液。是谁的暴力美学夹杂着孩子气，你有没有遇到过绝望透顶的时刻？你在黑夜里可曾有过滔天的恨意？多想就此躺下，多想了无牵挂。可是，天明了，你仍是个孩子。</div></div><div class="rp"><div class="time s-fc4">2017年6月30日</div><a data-id="456334639" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (11917)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="456334639" data-type="reply">回复</a></div></div></div><div id="4705832751524468761317" class="itm" data-id="470583275"><div class="head"><a href="/user/home?id=288063699"><img src="http://p1.music.126.net/-s0NdJVjLKIfr8pdMFFC7A==/109951163144633118.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=288063699" class="s-fc7">MisakaAkiko</a>：“妈妈，要下雨了。”</div></div><div class="rp"><div class="time s-fc4">2017年7月13日</div><a data-id="470583275" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (10172)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="470583275" data-type="reply">回复</a></div></div></div><div id="4563691641524468761317" class="itm" data-id="456369164"><div class="head"><a href="/user/home?id=49342343"><img src="http://p1.music.126.net/bY0kaYlyFyY3x98WzGyHyw==/109951163089828346.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=49342343" class="s-fc7">止辄尝浅</a>：一路上，不断有人侧目，你一定要像个孩子，坚持初心！</div></div><div class="rp"><div class="time s-fc4">2017年6月30日</div><a data-id="456369164" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (8639)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="456369164" data-type="reply">回复</a></div></div></div><div id="4718962291524468761317" class="itm" data-id="471896229"><div class="head"><a href="/user/home?id=119156420"><img src="http://p1.music.126.net/m9lMlvsmUHsd8PEWm1vokg==/18698294743740784.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=119156420" class="s-fc7">ST__小白__</a>：为何这么好的电影，上座率却这么低.不靠背景，不靠宣传，但诚意比《大圣归来》，《大鱼海棠》都要足，不想让《魁拔》的悲剧再重演了，好吗？<img src="http://s1.music.126.net/style/web2/emt/emoji_14.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_14.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_14.png"></div></div><div class="rp"><div class="time s-fc4">2017年7月14日</div><a data-id="471896229" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (8423)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="471896229" data-type="reply">回复</a></div></div></div><div id="4708048411524468761317" class="itm" data-id="470804841"><div class="head"><a href="/user/home?id=409218434"><img src="http://p1.music.126.net/EpdeaoAezltgtZYtpUR_kA==/18523472394932488.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=409218434" class="s-fc7">张小夫FTW</a>：我不贴眼睛，该被那些人怎么笑话啊！</div></div><div class="rp"><div class="time s-fc4">2017年7月13日</div><a data-id="470804841" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (8173)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="470804841" data-type="reply">回复</a></div></div></div><div id="4565662101524468761317" class="itm" data-id="456566210"><div class="head"><a href="/user/home?id=294320505"><img src="http://p1.music.126.net/vMudge2eolVW7gMcNqQzGA==/109951163242638900.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=294320505" class="s-fc7">墨不暢刮絲</a>：继《大圣归来》、《大鱼海棠》后，又一部“大”字系列的国产动画《大护法》</div></div><div class="rp"><div class="time s-fc4">2017年6月30日</div><a data-id="456566210" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (7068)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="456566210" data-type="reply">回复</a></div></div></div><div id="4709255491524468761317" class="itm" data-id="470925549"><div class="head"><a href="/user/home?id=307742256"><img src="http://p1.music.126.net/E7PmUa00WKoP3ORzUzeIiw==/2946691249243991.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=307742256" class="s-fc7">银河节奏</a>：为国产动画打call。一部正视观众智商的动画<br>其实一开始我并不怎么看好这个电影，之前它宣传“不适合13岁以下观看”有找噱头的嫌疑。<br>不过在看完之后，我给了自己一巴掌。<br>“反乌托邦的无比暗黑的动画电影”，画风也令人不由得想起汤浅政明。电影的口味很重,但口味重不是指暴力,而是导演对人心的刻画。</div></div><div class="rp"><div class="time s-fc4">2017年7月14日</div><a data-id="470925549" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (6734)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="470925549" data-type="reply">回复</a></div></div></div><div id="4563778261524468761317" class="itm" data-id="456377826"><div class="head"><a href="/user/home?id=127094785"><img src="http://p1.music.126.net/U-f007FuYYszfM59RXfsWw==/109951163257618287.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=127094785" class="s-fc7">Jasminesocool</a>：蔡琴像个智者，声音里满是确切的岁月，娓娓向你说，要是个孩子啊，怎样都不要变了本心。</div></div><div class="rp"><div class="time s-fc4">2017年6月30日</div><a data-id="456377826" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (4503)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="456377826" data-type="reply">回复</a></div></div></div><div id="4563553781524468761317" class="itm" data-id="456355378"><div class="head"><a href="/user/home?id=246991025"><img src="http://p1.music.126.net/_XL04gGLNfa-k5q8yGvyuQ==/109951162954232075.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=246991025" class="s-fc7">要成仙_</a>：动画电影《大护法》主题曲《你一定要是个孩子》。窦鹏作曲，导演不思凡填词。这是也蔡琴继《无间道》后，时隔14年再度为电影献唱主题曲。影片7月13日全国上映，《大圣归来》《大鱼海棠》之后再见《大护法》</div></div><div class="rp"><div class="time s-fc4">2017年6月30日</div><a data-id="456355378" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (3157)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="456355378" data-type="reply">回复</a></div></div></div><div id="4563726131524468761317" class="itm" data-id="456372613"><div class="head"><a href="/user/home?id=320397398"><img src="http://p1.music.126.net/T_66iYbgdtsuoeryDgPRDQ==/19041342370042586.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=320397398" class="s-fc7">我喜欢宁宁宁</a>：后天成人礼&nbsp;有亲子交换书信的环节&nbsp;刚刚偷偷看了爸写给我的信&nbsp;哭了</div></div><div class="rp"><div class="time s-fc4">2017年6月30日</div><a data-id="456372613" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (2676)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="456372613" data-type="reply">回复</a></div></div></div><div id="4610424661524468761317" class="itm" data-id="461042466"><div class="head"><a href="/user/home?id=377495878"><img src="http://p1.music.126.net/ot8lTU8cjHVlppSFFZRG3A==/109951163190000277.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=377495878" class="s-fc7">苦瓜先生__</a>：小时候主日学老师问我们长大想干嘛，问道我的时候，我说我想做传道者，将福音传到耶路撒冷。可我现在过得迷茫到一事无成，天天浑浑噩噩，唯一觉得值得的一件事就是我还相信上帝。</div></div><div class="rp"><div class="time s-fc4">2017年7月4日</div><a data-id="461042466" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (2397)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="461042466" data-type="reply">回复</a></div></div></div><div id="4563689131524468761317" class="itm" data-id="456368913"><div class="head"><a href="/user/home?id=124142713"><img src="http://p1.music.126.net/LOkUuAaZ1F04bUXWJcmSpA==/3401888983322904.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=124142713" class="s-fc7">蔚然成阴</a>：上午看了pv，一路走来，主角身边的人一个有一个增加，配上蔡琴的嗓音，突然击中心脏。后半部分不是动画是一些人的照片，如同歌词，想要你永远是个孩子，像个孩子永远坚强，暗不下心中守护的光<img src="http://s1.music.126.net/style/web2/emt/emoji_33.png"></div></div><div class="rp"><div class="time s-fc4">2017年6月30日</div><a data-id="456368913" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (2159)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="456368913" data-type="reply">回复</a></div></div></div><div id="4563478941524468761317" class="itm" data-id="456347894"><div class="head"><a href="/user/home?id=295285054"><img src="http://p1.music.126.net/APzXQj23dNEUq9JwMuttkw==/109951163242607497.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=295285054" class="s-fc7">静谧蓝2014</a>：為什麽你一定要是個孩子，因為當你在那個時候，無論你做什麽都會被原諒，在那個時候幾乎不會有負罪感，反而長大後，越發變得浮躁。曾經的時光永遠回不去了，好好珍惜少年時光吧。<img src="http://s1.music.126.net/style/web2/emt/emoji_85.png"></div></div><div class="rp"><div class="time s-fc4">2017年6月30日</div><a data-id="456347894" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (1895)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="456347894" data-type="reply">回复</a></div></div></div><div id="4708150371524468761317" class="itm" data-id="470815037"><div class="head"><a href="/user/home?id=294320505"><img src="http://p1.music.126.net/vMudge2eolVW7gMcNqQzGA==/109951163242638900.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=294320505" class="s-fc7">墨不暢刮絲</a>：《大护法》血腥暴力微微黄<img src="http://s1.music.126.net/style/web2/emt/emoji_341.png">没想到一部动画片能拍出血淋淋！！</div></div><div class="rp"><div class="time s-fc4">2017年7月13日</div><a data-id="470815037" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (1391)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="470815037" data-type="reply">回复</a></div></div></div><div id="4713947111524468761317" class="itm" data-id="471394711"><div class="head"><a href="/user/home?id=134210093"><img src="http://p1.music.126.net/pVr7jEgKhj7hnIsnfZIxnQ==/109951163164424498.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=134210093" class="s-fc7">你看树站着睡觉</a>：我带上这红布&nbsp;只是为了你能一眼找到我&nbsp;我装作吓人的样子&nbsp;其实我更想了解你的样子&nbsp;我穷其一切只为了一刀取人心脏&nbsp;最后却取了自己的心脏&nbsp;终于达成所愿&nbsp;我固执的认为小姜的心是蓝色是因为小姜是唯一个心怀善良的花生人</div></div><div class="rp"><div class="time s-fc4">2017年7月14日</div><a data-id="471394711" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (1018)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="471394711" data-type="reply">回复</a></div></div></div><br><br><h3 class="u-hd4">最新评论(10151)</h3> <div id="10950243681524468761317" class="itm" data-id="1095024368"><div class="head"><a href="/user/home?id=1381155125"><img src="http://p1.music.126.net/q22h-7Zw-280ZDHK1ulhbw==/109951163240994092.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=1381155125" class="s-fc7">神一样的我1802</a>：谁也不能让你像个孩子。除了自己</div></div><div class="rp"><div class="time s-fc4">刚刚</div><a data-id="1095024368" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i></a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1095024368" data-type="reply">回复</a></div></div></div><div id="10950351161524468761317" class="itm" data-id="1095035116"><div class="head"><a href="/user/home?id=1381155125"><img src="http://p1.music.126.net/q22h-7Zw-280ZDHK1ulhbw==/109951163240994092.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=1381155125" class="s-fc7">神一样的我1802</a>：大世界<br><img src="http://s1.music.126.net/style/web2/emt/emoji_86.png"></div></div><div class="que f-brk f-pr s-fc3"><span class="darr"><i class="bd">◆</i><i class="bg">◆</i></span><a class="s-fc7" href="/user/home?id=294320505">墨不暢刮絲</a>：继《大圣归来》、《大鱼海棠》后，又一部“大”字系列的国产动画《大护法》</div><div class="rp"><div class="time s-fc4">1分钟前</div><a data-id="1095035116" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i></a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1095035116" data-type="reply">回复</a></div></div></div><div id="10950173711524468761317" class="itm" data-id="1095017371"><div class="head"><a href="/user/home?id=110645494"><img src="http://p1.music.126.net/0z5e9yqMz10ksomTp1629Q==/109951163149724024.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=110645494" class="s-fc7">蔽芾甘棠和你</a>：哈哈哈哈！有个朋友她也叫偶尔吃茶去</div></div><div class="que f-brk f-pr s-fc3"><span class="darr"><i class="bd">◆</i><i class="bg">◆</i></span><a class="s-fc7" href="/user/home?id=343215023">不__如吃茶去</a>：不是，我住在城乡结合部的。</div><div class="rp"><div class="time s-fc4">6分钟前</div><a data-id="1095017371" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i></a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1095017371" data-type="reply">回复</a></div></div></div><div id="10950042131524468761317" class="itm" data-id="1095004213"><div class="head"><a href="/user/home?id=593291010"><img src="http://p1.music.126.net/orSeeLLe-_lPdVzM-WOjlw==/109951163111042122.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=593291010" class="s-fc7">曰归曰归胡不归</a>：抱住，有时候越是亲近的人这样说越是觉得伤心，感觉像是自己付出的努力他们完全没有看到一样。希望我们都能活成自己喜欢的样子。</div></div><div class="que f-brk f-pr s-fc3"><span class="darr"><i class="bd">◆</i><i class="bg">◆</i></span><a class="s-fc7" href="/user/home?id=450786071">方道长是小王子</a>：因为你没有活成他们想象的样子，所以永远被看成是孩子。我是这么被对待的，怎么解释都没用，而且让自己伤心，既然说不到一块去，就不说了，哪怕是家人。</div><div class="rp"><div class="time s-fc4">43分钟前</div><a data-id="1095004213" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i></a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1095004213" data-type="reply">回复</a></div></div></div><div id="10950099371524468761317" class="itm" data-id="1095009937"><div class="head"><a href="/user/home?id=332331030"><img src="http://p1.music.126.net/04MXFkOJznhBqcJlPSYiPA==/109951163079115160.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=332331030" class="s-fc7">14岁少年惨遭数名女老师轮流握手</a>：皮</div></div><div class="que f-brk f-pr s-fc3"><span class="darr"><i class="bd">◆</i><i class="bg">◆</i></span><a class="s-fc7" href="/user/home?id=583201707">多多只有一个</a>：如果有人认识卢本伟，请转告他，我爱他。我叫刘谋，如果评论把我淹没，就当我是个象拔蚌</div><div class="rp"><div class="time s-fc4">52分钟前</div><a data-id="1095009937" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (1)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1095009937" data-type="reply">回复</a></div></div></div><div id="10949782841524468761317" class="itm" data-id="1094978284"><div class="head"><a href="/user/home?id=335413919"><img src="http://p1.music.126.net/gl08mEuHBdzNKRmwqDoGdg==/18710389371954409.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=335413919" class="s-fc7">拉渣姐</a>：嗯。</div></div><div class="que f-brk f-pr s-fc3"><span class="darr"><i class="bd">◆</i><i class="bg">◆</i></span><a class="s-fc7" href="/user/home?id=133162039">孤日的独</a>：会有的。</div><div class="rp"><div class="time s-fc4">14:25</div><a data-id="1094978284" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i></a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1094978284" data-type="reply">回复</a></div></div></div><div id="10950155171524468761317" class="itm" data-id="1095015517"><div class="head"><a href="/user/home?id=1436847467"><img src="http://p1.music.126.net/tZcN9TllcEjL0dSYhurn7w==/109951163263151911.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=1436847467" class="s-fc7">向世人证明</a>：我相信星游记可以创造奇迹，可以让绝望的我们产生希望，可以带给我们坚持下去的勇气。我，我们，星游记都不能跪下，都会高高的飞起来！！！&nbsp;星游记是因为我们而战，而我们是为希望而活！！！！！<img src="http://s1.music.126.net/style/web2/emt/emoji_356.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_356.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_356.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_356.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_356.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_356.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_356.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_356.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_356.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_356.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_356.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_356.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_356.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_356.png"></div></div><div class="rp"><div class="time s-fc4">14:25</div><a data-id="1095015517" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i></a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1095015517" data-type="reply">回复</a></div></div></div><div id="10949821341524468761317" class="itm" data-id="1094982134"><div class="head"><a href="/user/home?id=552245686"><img src="http://p1.music.126.net/V11lmj7K7-z6pE2mgpRsgg==/109951163202854964.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=552245686" class="s-fc7">一说是L小姐本人无疑</a>：支持第二部，如果钱不够，我们可以众筹</div></div><div class="rp"><div class="time s-fc4">14:13</div><a data-id="1094982134" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (3)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1094982134" data-type="reply">回复</a></div></div></div><div id="10950015671524468761317" class="itm" data-id="1095001567"><div class="head"><a href="/user/home?id=375001512"><img src="http://p1.music.126.net/wsJUgzpatiAeET_Iwoe2VQ==/18945684858344084.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=375001512" class="s-fc7">Jude930</a>：日出东湖落西山，愁也一天，喜也一天。遇事不钻牛角尖，人也舒坦，心也舒坦——大护法（已成为我的座右铭）<img src="http://s1.music.126.net/style/web2/emt/emoji_13.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_13.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_13.png"></div></div><div class="rp"><div class="time s-fc4">14:06</div><a data-id="1095001567" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (3)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1095001567" data-type="reply">回复</a></div></div></div><div id="10949985261524468761317" class="itm" data-id="1094998526"><div class="head"><a href="/user/home?id=10362857"><img src="http://p1.music.126.net/HJVRg6k-i8OU7z5xic_w0Q==/3412884110617159.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=10362857" class="s-fc7">Y-Y小昕</a>：你一定要个孩子！可是国家还没我分配男朋友啊。</div></div><div class="rp"><div class="time s-fc4">14:04</div><a data-id="1094998526" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (1)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1094998526" data-type="reply">回复</a></div></div></div><div id="10949777931524468761317" class="itm" data-id="1094977793"><div class="head"><a href="/user/home?id=443300176"><img src="http://p1.music.126.net/0TEYRDDbF3Qp_tYeVj_MDQ==/109951163241278410.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=443300176" class="s-fc7">十二丶H</a>：她很好&nbsp;对吧</div></div><div class="rp"><div class="time s-fc4">13:51</div><a data-id="1094977793" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (1)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1094977793" data-type="reply">回复</a></div></div></div><div id="10949755451524468761317" class="itm" data-id="1094975545"><div class="head"><a href="/user/home?id=340113728"><img src="http://p1.music.126.net/vFW5NKPc8gVAwdyd5c3tGw==/109951163212106633.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=340113728" class="s-fc7">第二集</a>：<img src="http://s1.music.126.net/style/web2/emt/emoji_13.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_13.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_13.png">是真的很好看</div></div><div class="rp"><div class="time s-fc4">13:35</div><a data-id="1094975545" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (1)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1094975545" data-type="reply">回复</a></div></div></div><div id="10949430981524468761317" class="itm" data-id="1094943098"><div class="head"><a href="/user/home?id=72085675"><img src="http://p1.music.126.net/TnG_gZ7eVwAotSo_t31mdQ==/109951163261618137.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=72085675" class="s-fc7">Noucamper_</a>：竟然提到了魁拔<img src="http://s1.music.126.net/style/web2/emt/emoji_13.png"></div></div><div class="que f-brk f-pr s-fc3"><span class="darr"><i class="bd">◆</i><i class="bg">◆</i></span><a class="s-fc7" href="/user/home?id=119156420">ST__小白__</a>：为何这么好的电影，上座率却这么低.不靠背景，不靠宣传，但诚意比《大圣归来》，《大鱼海棠》都要足，不想让《魁拔》的悲剧再重演了，好吗？<img src="http://s1.music.126.net/style/web2/emt/emoji_14.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_14.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_14.png"></div><div class="rp"><div class="time s-fc4">13:21</div><a data-id="1094943098" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (1)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1094943098" data-type="reply">回复</a></div></div></div><div id="10949372441524468761317" class="itm" data-id="1094937244"><div class="head"><a href="/user/home?id=414121910"><img src="http://p1.music.126.net/qu5c89BVhtUct2Lv3j2ueQ==/109951163180104486.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=414121910" class="s-fc7">骄傲的接班人</a>：很喜欢大护法的性格啊啊，莫名感觉一种熟悉感</div></div><div class="rp"><div class="time s-fc4">13:21</div><a data-id="1094937244" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (1)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1094937244" data-type="reply">回复</a></div></div></div><div id="10949332291524468761317" class="itm" data-id="1094933229"><div class="head"><a href="/user/home?id=296809913"><img src="http://p1.music.126.net/-I1kKN9ic1s-W-5ly_jWmA==/109951163257465112.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=296809913" class="s-fc7">肖铭白</a>：<img src="http://s1.music.126.net/style/web2/emt/emoji_357.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_357.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_357.png"></div></div><div class="que f-brk f-pr s-fc3"><span class="darr"><i class="bd">◆</i><i class="bg">◆</i></span><a class="s-fc7" href="/user/home?id=1354205205">戏妖君子</a>：我漏得番挺多啊<img src="http://s1.music.126.net/style/web2/emt/emoji_357.png"></div><div class="rp"><div class="time s-fc4">13:16</div><a data-id="1094933229" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (1)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1094933229" data-type="reply">回复</a></div></div></div><div id="10949457201524468761317" class="itm" data-id="1094945720"><div class="head"><a href="/user/home?id=416887009"><img src="http://p1.music.126.net/2x0otyu6T2mKWGjYUYN5tg==/109951163123186769.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=416887009" class="s-fc7">-只一程-</a>：<img src="http://s1.music.126.net/style/web2/emt/emoji_450.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_450.png"><img src="http://s1.music.126.net/style/web2/emt/emoji_450.png">才不会，来呀，来呀，一起看动画片嗷</div></div><div class="que f-brk f-pr s-fc3"><span class="darr"><i class="bd">◆</i><i class="bg">◆</i></span><a class="s-fc7" href="/user/home?id=274226025">永远的虫子大人</a>：看来已经不是了ㅍ_ㅍ只有大人装萌才会这样</div><div class="rp"><div class="time s-fc4">13:09</div><a data-id="1094945720" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i></a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1094945720" data-type="reply">回复</a></div></div></div><div id="10949417961524468761317" class="itm" data-id="1094941796"><div class="head"><a href="/user/home?id=371678648"><img src="http://p1.music.126.net/LUrK4jgkH_AMIj5QeqQfaw==/18948983393363704.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=371678648" class="s-fc7">W顾小五</a>：他听这歌，可有想起我</div></div><div class="rp"><div class="time s-fc4">13:07</div><a data-id="1094941796" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (1)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1094941796" data-type="reply">回复</a></div></div></div><div id="10949406111524468761317" class="itm" data-id="1094940611"><div class="head"><a href="/user/home?id=134059249"><img src="http://p1.music.126.net/OUSsDwbxkA8m1vR0yEGlng==/18987466300489323.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=134059249" class="s-fc7">丧失书宇兽_</a>：为什么太阳那么红，还是那么冷</div></div><div class="rp"><div class="time s-fc4">13:01</div><a data-id="1094940611" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (4)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1094940611" data-type="reply">回复</a></div></div></div><div id="10949240891524468761317" class="itm" data-id="1094924089"><div class="head"><a href="/user/home?id=456430184"><img src="http://p1.music.126.net/eJLjn1B0e1UGujyo4Xc-jA==/109951163138500612.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=456430184" class="s-fc7">深海续梦</a>：你一定要是个孩子，如现在一般单纯而美好。&nbsp;2018.4.23.12:59</div></div><div class="rp"><div class="time s-fc4">12:59</div><a data-id="1094924089" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (1)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1094924089" data-type="reply">回复</a></div></div></div><div id="10949336931524468761317" class="itm" data-id="1094933693"><div class="head"><a href="/user/home?id=1308711202"><img src="http://p1.music.126.net/NUpDU-VTsNFh_3B2qxpv8Q==/18932490719144016.jpg?param=50y50"></a></div><div class="cntwrap"><div class=""><div class="cnt f-brk"><a href="/user/home?id=1308711202" class="s-fc7">超级无敌美少女维多利亚eating</a>：为什么太阳这么红，却还是这么冷</div></div><div class="rp"><div class="time s-fc4">12:58</div><a data-id="1094933693" data-type="like" href="javascript:void(0)"><i class="zan u-icn2 u-icn2-12"></i> (1)</a><span class="sep">|</span><a href="javascript:void(0)" class="s-fc3" data-id="1094933693" data-type="reply">回复</a></div></div></div></div>
+<div class="j-flag auto-1524468761315-parent"><div class="auto-1524468761315 u-page"><a href="#" class="zbtn zprv js-p-1524468761317 js-disabled" id="auto-id-ddEDUWRPgCJg7ySL">上一页</a><a href="#" class="zpgi zpg1 js-i-1524468761317 js-selected" id="auto-id-TMpHTp6EUvnblXSH">1</a><a href="#" class="zpgi zpg2 js-i-1524468761317" id="auto-id-PSRsdVpJQbKy5OkT">2</a><a href="#" class="zpgi zpg3 js-i-1524468761317" id="auto-id-IOJ1eISgR42h31Zq">3</a><a href="#" class="zpgi zpg4 js-i-1524468761317" id="auto-id-bnFGIfXpbXEvR7Wk">4</a><a href="#" class="zpgi zpg5 js-i-1524468761317" id="auto-id-dMZfthPRxN91oFeH">5</a><a href="#" class="zpgi zpg6 js-i-1524468761317" id="auto-id-U2k9lBtb9D4vB1nb">6</a><a href="#" class="zpgi zpg7 js-i-1524468761317" id="auto-id-DVwLmhliwlZr7UT1">7</a><a href="#" class="zpgi zpg8 js-i-1524468761317" id="auto-id-ohpaFI3RFrocbntZ">8</a><span class="zdot">...</span><a href="#" class="zpgi zpg9 js-i-1524468761317" id="auto-id-eyalwEE7FOpgli26">508</a><a href="#" class="zbtn znxt js-n-1524468761317" id="auto-id-Ag23t0HQi3RTThTD">下一页</a></div></div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+<div class="g-sd4">
+<div class="g-wrap7">
+<div id="j-music-ad" class="m-sidead" data-has-music-ad="0">
+<div class="j-flag f-hide" id="auto-id-238BGH56qDCT4PUA"></div>
+<div class="j-flag">
+<ins class="adsbydm" inner-prod="adbid" inner-width="200" inner-height="220" inner-src="http://iad.g.163.com/wa/ad?site=netease&amp;affiliate=music&amp;cat=detail&amp;type=logo200x220&amp;location=1" check-src="http://iad.g.163.com/wa/ad_check?site=netease&amp;affiliate=music&amp;cat=detail&amp;type=logo200x220&amp;location=1"><div><iframe id="b01a9b4687974911a92fc7c0a65d44de" width="200" height="220" prod="adbid" frameborder="0" scrolling="no" border="0" src="http://iad.g.163.com/wa/ad?site=netease&amp;affiliate=music&amp;cat=detail&amp;type=logo200x220&amp;location=1&amp;uuid=b01a9b4687974911a92fc7c0a65d44de"></iframe></div></ins>
+</div>
+</div>
+<h3 class="u-hd3">
+<span class="f-fl">包含这首歌的歌单</span>
+</h3>
+<ul class="m-rctlist f-cb">
+<li>
+<div class="cver u-cover u-cover-3">
+<a href="/playlist?id=2175704298" title="你一定要是个孩子" data-res-id="2175704298" data-res-type="13" data-res-action="log" data-res-data="recommendclick|0||song-playlist-recommend|487379098"><img src="http://p4.music.126.net/kDH59ouX99NivKXEVKr0Yw==/109951163243617760.jpg?param=50y50">
+</a>
+</div>
+<div class="info">
+<p class="f-thide">
+<a class="sname f-fs1 s-fc0" href="/playlist?id=2175704298" title="你一定要是个孩子" data-res-id="2175704298" data-res-type="13" data-res-action="log" data-res-data="recommendclick|0||song-playlist-recommend|487379098">你一定要是个孩子</a>
+</p>
+<p><span class="by s-fc4">by</span><a class="nm nm f-thide s-fc3" href="/user/home?id=30053668" title="Ian_Icebear">Ian_Icebear</a>
+<sup class="u-icn u-icn-84 "></sup>
+</p></div>
+</li>
+<li>
+<div class="cver u-cover u-cover-3">
+<a href="/playlist?id=890846689" title="神道妖道人道，自求人间道" data-res-id="890846689" data-res-type="13" data-res-action="log" data-res-data="recommendclick|1||song-playlist-recommend|487379098"><img src="http://p4.music.126.net/gCBFu6ZQ2WmTb2ITm7XHhg==/18712588395145028.jpg?param=50y50">
+</a>
+</div>
+<div class="info">
+<p class="f-thide">
+<a class="sname f-fs1 s-fc0" href="/playlist?id=890846689" title="神道妖道人道，自求人间道" data-res-id="890846689" data-res-type="13" data-res-action="log" data-res-data="recommendclick|1||song-playlist-recommend|487379098">神道妖道人道，自求人间道</a>
+</p>
+<p><span class="by s-fc4">by</span><a class="nm nm f-thide s-fc3" href="/user/home?id=311877725" title="蝶影丛虫">蝶影丛虫</a>
+<sup class="u-icn u-icn-84 "></sup>
+</p></div>
+</li>
+<li>
+<div class="cver u-cover u-cover-3">
+<a href="/playlist?id=730426023" title="内地优秀影视作曲人•作品选辑" data-res-id="730426023" data-res-type="13" data-res-action="log" data-res-data="recommendclick|2||song-playlist-recommend|487379098"><img src="http://p4.music.126.net/pRxc5A4IO4eAO33JN_ZY3w==/109951163257143731.jpg?param=50y50">
+</a>
+</div>
+<div class="info">
+<p class="f-thide">
+<a class="sname f-fs1 s-fc0" href="/playlist?id=730426023" title="内地优秀影视作曲人•作品选辑" data-res-id="730426023" data-res-type="13" data-res-action="log" data-res-data="recommendclick|2||song-playlist-recommend|487379098">内地优秀影视作曲人•作品选辑</a>
+</p>
+<p><span class="by s-fc4">by</span><a class="nm nm f-thide s-fc3" href="/user/home?id=283413472" title="可尼晏">可尼晏</a>
+<sup class="u-icn u-icn-84 "></sup>
+</p></div>
+</li>
+</ul>
+<h3 class="u-hd3">
+<span class="f-fl">相似歌曲</span>
+</h3>
+<ul class="m-sglist f-cb">
+<li>
+</li><li class="f-cb">
+<div class="txt">
+<div class="f-thide">
+<a href="/song?id=488647687" title="想要去的地方" class="s-fc1" data-res-id="488647687" data-res-type="18" data-res-action="log" data-res-data="recommendclick|0||song-song-recommend|487379098">想要去的地方</a>
+</div>
+<div class="f-thide s-fc4"><span title="关晓彤"><a class="s-fc4" href="/artist?id=1150075">关晓彤</a></span></div>
+</div>
+<div class="opr f-cb">
+<a data-res-action="play" data-res-id="488647687" data-res-type="18" class="play" href="javascript:;"></a>
+<a data-res-action="addto" data-res-id="488647687" data-res-type="18" class="add" href="javascript:;"></a>
+</div>
+</li>
+
+<li>
+</li><li class="f-cb">
+<div class="txt">
+<div class="f-thide">
+<a href="/song?id=210139" title="小白菜" class="s-fc1" data-res-id="210139" data-res-type="18" data-res-action="log" data-res-data="recommendclick|1||song-song-recommend|487379098">小白菜</a>
+</div>
+<div class="f-thide s-fc4"><span title="蔡琴"><a class="s-fc4" href="/artist?id=7220">蔡琴</a></span></div>
+</div>
+<div class="opr f-cb">
+<a data-res-action="play" data-res-id="210139" data-res-type="18" class="play" href="javascript:;"></a>
+<a data-res-action="addto" data-res-id="210139" data-res-type="18" class="add" href="javascript:;"></a>
+</div>
+</li>
+
+<li>
+</li><li class="f-cb">
+<div class="txt">
+<div class="f-thide">
+<a href="/song?id=485607480" title="不说话" class="s-fc1" data-res-id="485607480" data-res-type="18" data-res-action="log" data-res-data="recommendclick|2||song-song-recommend|487379098">不说话</a>
+</div>
+<div class="f-thide s-fc4"><span title="周深"><a class="s-fc4" href="/artist?id=1030001">周深</a></span></div>
+</div>
+<div class="opr f-cb">
+<a data-res-action="play" data-res-id="485607480" data-res-type="18" class="play" href="javascript:;"></a>
+<a data-res-action="addto" data-res-id="485607480" data-res-type="18" class="add" href="javascript:;"></a>
+</div>
+</li>
+
+<li>
+</li><li class="f-cb">
+<div class="txt">
+<div class="f-thide">
+<a href="/song?id=5283977" title="把根留住" class="s-fc1" data-res-id="5283977" data-res-type="18" data-res-action="log" data-res-data="recommendclick|3||song-song-recommend|487379098">把根留住</a>
+</div>
+<div class="f-thide s-fc4"><span title="苏芮/甄妮/王虹/张明敏/吕方/童安格/蔡琴/潘美辰"><a class="s-fc4" href="/artist?id=9274">苏芮</a>/<a class="s-fc4" href="/artist?id=10594">甄妮</a>/<a class="s-fc4" href="/artist?id=9749">王虹</a>/<a class="s-fc4" href="/artist?id=6501">张明敏</a>/<a class="s-fc4" href="/artist?id=3723">吕方</a>/<a class="s-fc4" href="/artist?id=5197">童安格</a>/<a class="s-fc4" href="/artist?id=7220">蔡琴</a>/<a class="s-fc4" href="/artist?id=9104">潘美辰</a></span></div>
+</div>
+<div class="opr f-cb">
+<a data-res-action="play" data-res-id="5283977" data-res-type="18" class="play" href="javascript:;"></a>
+<a data-res-action="addto" data-res-id="5283977" data-res-type="18" class="add" href="javascript:;"></a>
+</div>
+</li>
+
+<li>
+</li><li class="f-cb">
+<div class="txt">
+<div class="f-thide">
+<a href="/song?id=490723727" title="无踪" class="s-fc1" data-res-id="490723727" data-res-type="18" data-res-action="log" data-res-data="recommendclick|4||song-song-recommend|487379098">无踪</a>
+</div>
+<div class="f-thide s-fc4"><span title="苏紫旭&amp;The&nbsp;Paramecia"><a class="s-fc4" href="/artist?id=1045060">苏紫旭&amp;The&nbsp;Paramecia</a></span></div>
+</div>
+<div class="opr f-cb">
+<a data-res-action="play" data-res-id="490723727" data-res-type="18" class="play" href="javascript:;"></a>
+<a data-res-action="addto" data-res-id="490723727" data-res-type="18" class="add" href="javascript:;"></a>
+</div>
+</li>
+
+</ul>
+<div class="m-multi">
+<h3 class="u-hd3">
+<span class="f-fl">网易云音乐多端下载</span>
+</h3>
+<ul class="bg f-cb">
+<li><a data-res-action="bilog" data-log-action="downloadapp" data-log-json="{&quot;type&quot;:&quot;iPhone&quot;,&quot;source&quot;:&quot;detail&quot;}" href="https://itunes.apple.com/app/id590338362" class="ios" hidefocus="true" target="_blank">iPhone</a></li>
+<li><a data-res-action="bilog" data-log-action="downloadapp" data-log-json="{&quot;type&quot;:&quot;pc&quot;,&quot;source&quot;:&quot;detail&quot;}" href="http://music.163.com/api/pc/download/latest" class="pc" hidefocus="true" target="_blank">PC</a></li>
+<li><a data-res-action="bilog" data-log-action="downloadapp" data-log-json="{&quot;type&quot;:&quot;android&quot;,&quot;source&quot;:&quot;detail&quot;}" href="http://music.163.com/api/android/download/latest2" class="aos" hidefocus="true" target="_blank">Android</a></li>
+</ul>
+<p class="s-fc4">同步歌单，随时畅听320k好音乐</p>
+</div>
+</div>
+</div>
+</div>
+<div class="g-ft ">
+<div class="m-ft">
+<div class="wrap f-cb">
+<div class="copy">
+<p>
+<a href="//music.163.com/about" target="_blank" class="s-fc4">关于网易</a><span class="line">|</span>
+<a href="//help.163.com/" target="_blank" class="s-fc4">客户服务</a><span class="line">|</span>
+<a href="//music.163.com/html/web2/service.html" target="_blank" class="s-fc4">服务条款</a><span class="line">|</span>
+<a href="//sitemap.163.com/" target="_blank" class="s-fc4">网站导航</a><span class="line">|</span>
+<a id="g_feedback" href="#" class="s-fc4" onclick="nm.x.feedback();return false;" hidefocus="true">意见反馈</a>
+</p>
+<p class="s-fc3">
+<span class="sep">网易公司版权所有©1997-2018</span>杭州乐读科技有限公司运营：<a href="http://p1.music.126.net/-DB9zs1FAJq8vg7HOb-yOQ==/3250156395654666.jpg" target="_blank" class="s-fc3">浙网文[2015] 0415-135号</a>
+</p>
+<p class="s-fc3">
+<span class="sep">违法和不良信息举报电话：0571-89853516</span>
+举报邮箱：<a href="mailto:cloudmusicservice@163.com">cloudmusicservice@163.com</a>
+</p>
+</div>
+<ul class="enter f-fr">
+<li>
+<a class="logo logo-musician f-tid" href="//music.163.com/recruit" target="_blank">独立音乐人</a>
+</li>
+<li>
+<a class="logo logo-topic f-tid" href="//music.163.com/topic/recruit" target="_blank">音乐专栏</a>
+</li>
+<li>
+<a class="logo logo-midea f-tid" href="//music.163.com/topic/selfmedia" target="_blank">自媒体</a>
+</li>
+<li>
+<a class="logo logo-reward f-tid" href="//music.163.com/web/reward" target="_blank">赞赏</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<a title="回到顶部" class="m-back" href="#" id="g_backtop" hidefocus="true" style="display: none;">回到顶部</a>
+
+<script src="//s3.music.126.net/web/s/core.js?07660f37992222fce4cc4e5591c0ccef" type="text/javascript"></script><iframe frameborder="0" id="auto-id-QyLHXbZgLk7IeEVK" style="display: none;" src="about:blank"></iframe><script src="//s3.music.126.net/web/s/pt_song_index.js?ef10f83f75f12f06fe6ed031ad7239cb" type="text/javascript"></script><div id="shadow-box" style="word-wrap: break-word; width: 564px; border-width: 1px; border-style: solid; outline: rgb(51, 51, 51) none 0px; margin: 0px -20px 0px 0px; height: 50px; padding-left: 6px; padding-top: 5px; font-size: 12px; font-family: Arial, Helvetica, sans-serif; line-height: 19px; overflow: auto;" class="auto-1524468761318"><span class="node-before"></span><span>@</span><span class="node-after"></span></div><script type="text/javascript" src="http://s3.music.126.net/js/web2/3rd/acstatic-dun.min.js"></script>
+<script defer="defer" src="//img3.126.net/kaola/dsp1f/js/ntes-ad-cloud.min.js?v=1.0"></script>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-38766552-1'],['_setLocalGifPath', '/UA-38766552-1/__utm.gif'],['_setLocalRemoteServerMode']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script');
+ga.type = 'text/javascript';
+ga.async = true;
+ga.src = '//wr.da.netease.com/ga.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s);
+})();//fix ipad下的一个bug
+if (navigator.userAgent.indexOf('iPad') != -1) {
+iframeHeight = Math.max(
+Math.max(document.body.scrollHeight, document.documentElement.scrollHeight),
+Math.max(document.body.offsetHeight, document.documentElement.offsetHeight),
+Math.max(document.body.clientHeight, document.documentElement.clientHeight)
+);
+top.document.body.style.height = iframeHeight + 20 + 'px';
+}</script>
+</body></html>
