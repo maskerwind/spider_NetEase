@@ -4,10 +4,18 @@
 #
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-
+import random
 from scrapy import signals
 from scrapy.http import HtmlResponse
 from selenium import webdriver
+from useragents import agents
+from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware #UserAegent中间件
+
+
+class UserAgentmiddleware(UserAgentMiddleware):
+    def process_request(self, request, spider):
+        agent = random.choice(agents)
+        request.headers["User-Agent"] = agent
 
 class NeteaseSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,

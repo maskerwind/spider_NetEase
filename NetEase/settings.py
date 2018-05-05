@@ -64,9 +64,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'NetEase.pipelines.NeteasePipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'NetEase.pipelines.NeteasePipeline': 300,
+    'scrapy_redis.pipelines.RedisPipeline': 400,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -89,6 +90,26 @@ HTTPCACHE_DIR = 'httpcache'
 HTTPCACHE_IGNORE_HTTP_CODES = []
 HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
+
+# scrapy redis
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# SCHEDULER_PERSIST = True
+
+
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+
 DOWNLOADER_MIDDLEWARES = {
     'NetEase.middlewares.PhantomJSMiddleware': 100
 }
+
+# MONGODB 主机名
+MONGODB_HOST = "127.0.0.1"
+# MONGODB 端口号
+MONGODB_PORT = 27017
+# 数据库名称
+MONGODB_DBNAME = "netease"
+# 存放数据的表名称
+MONGODB_SHEETNAME_SONGLISTS = "songlists"
+MONGODB_SHEETNAME_SONGS = "songs"

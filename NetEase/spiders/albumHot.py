@@ -1,11 +1,12 @@
 # -*- coding: utf8 -*-
-import scrapy
 from scrapy.http import Request
 from NetEase.items import SongListItem
 from NetEase.items import SongItem
-import hashlib
+from scrapy_redis.spiders import RedisSpider
 
-class SongListSpider(scrapy.Spider):
+
+# class SongListSpider(scrapy.Spider):
+class SongListSpider(RedisSpider):
     name = 'songList'
     allowed_domain = ['music.163']
     pre_url = "http://music.163.com/#"  # pre-link of album page
@@ -101,7 +102,8 @@ class SongListSpider(scrapy.Spider):
         container_songAlbumLink = response.xpath(xpath_songAlbumLink)
         songsID = []
         for i in range(int(songCount)):
-            songsID.append(hashlib.md5(container_songLink.extract()[i]))   # not include pre_url
+            # songsID.append(hashlib.md5(container_songLink.extract()[i]))   # not include pre_url
+            songsID.append(container_songLink.extract()[i])
 
         print("uploader name:" + uploaderName)
         print("uploader link:" + uploaderLink)
@@ -126,30 +128,32 @@ class SongListSpider(scrapy.Spider):
         song_list['SongList_Intro'] = albumIntro
         song_list['SongList_TotalSongNum'] = songCount
         song_list['SongList_SongRank'] = songsID
-        testurl = "http://music.163.com/#/song?id=487379098"
-        request = Request(url=testurl, meta={'song': song, 'PhantomJS': True}, callback=self.parse_song,
-                          dont_filter=True)
-        # songList = []
-        # for i in range(int(songCount)):
-        #     # tempDict = {'Name':container_songName.extract()[i],
-        #     #             'songLink':container_songLink.extract()[i],
-        #     #             'duration':container_songDuration.extract()[i],
-        #     #             'singer':container_songSinger.extract()[i],
-        #     #             'album':container_songAlbum.extract()[i],
-        #     #             'albumLink':container_songAlbumLink.extract()[i]
-        #     #             }
-        #     # songList.append(tempDict)
-        #     song['SongID'] = songsID[i]
-        #     song['Song_Name'] = container_songName.extract()[i]
-        #     song['Song_Link'] = self.pre_url + container_songLink.extract()[i]
-        #     song['Song_Duration'] = container_songDuration.extract()[i]
-        #     song['Song_Singer'] = container_songSinger.extract()[i]
-        #     song['Song_Ablum'] = container_songAlbum.extract()[i]
-        #     request = Request(url=song['Song_Link'], meta={'song': song, 'PhantomJS': True}, callback=self.parse_song, dont_filter=True)
-        #
-        #     yield request
+        # # test
+        # testurl = "http://music.163.com/#/song?id=487379098"
+        # request = Request(url=testurl, meta={'song': song, 'PhantomJS': True}, callback=self.parse_song,
+        #                   dont_filter=True)
+        songList = []
+        for i in range(int(songCount)):
+            # tempDict = {'Name':container_songName.extract()[i],
+            #             'songLink':container_songLink.extract()[i],
+            #             'duration':container_songDuration.extract()[i],
+            #             'singer':container_songSinger.extract()[i],
+            #             'album':container_songAlbum.extract()[i],
+            #             'albumLink':container_songAlbumLink.extract()[i]
+            #             }
+            # songList.append(tempDict)
+            song['SongID'] = songsID[i]
+            song['Song_Name'] = container_songName.extract()[i]
+            song['Song_Link'] = self.pre_url + container_songLink.extract()[i]
+            song['Song_Duration'] = container_songDuration.extract()[i]
+            song['Song_Singer'] = container_songSinger.extract()[i]
+            song['Song_Ablum'] = container_songAlbum.extract()[i]
+            request = Request(url=song['Song_Link'], meta={'song': song, 'PhantomJS': True}, callback=self.parse_song, dont_filter=True)
+
+            yield request
         yield song_list
-        yield request
+
+        # yield request
         # testurl = "http://music.163.com/#/song?id=487379098"
 
     # Song page
@@ -176,16 +180,18 @@ class SongListSpider(scrapy.Spider):
                 lyrics = song_lyrics + song_lyricsMore
             else:
                 lyrics = song_lyrics
-        top_comments_temp = {}
-        top_comments_list = []
 
+        top_comments_list = []
         if response.xpath(xpath_topCommentsDiv):
-            for i in range(len(response.xpath(xpath_topComments_author).extract())):
-                top_comments_temp['Song_CommentContent'] = response.xpath(xpath_topComments)[i].xpath('string(.)').extract()[0]
-                top_comments_temp['Song_CommentAuthor'] = response.xpath(xpath_topComments_author).extract()[i]
-                top_comments_temp['Song_CommentTime'] = response.xpath(xpath_topCommentsTime).extract()[i]
-                top_comments_temp['Song_CommentThumbsUp'] = response.xpath(xpath_topCommentsCount).extract()[i]
-                top_comments_list.append(top_comments_temp)
+            for i in range(len(response.xpath(xpath_topComments).extract())):
+                top_comments_list.append({'Song_CommentContent':response.xpath(xpath_topComments)[i].xpath('string(.)').extract()[0],
+                                          'Song_CommentAuthor':response.xpath(xpath_topComments_author).extract()[i],
+                                          'Song_CommentTime':response.xpath(xpath_topCommentsTime).extract()[i],
+                                          'Song_CommentThumbsUp':response.xpath(xpath_topCommentsCount).extract()[i]})
+
+            for i in range(len(top_comments_list)):
+                print(top_comments_list[i])
+
         song['Song_TopComments'] = top_comments_list
         song['Song_lyrics'] = lyrics
         song['Song_CommentNum'] = song_commentCount
