@@ -34,8 +34,6 @@ class NeteasePipeline(object):
         self.db = client[dbname]
 
 
-
-
     def process_item(self, item, spider):
 
         sheetname_songlist = settings["MONGODB_SHEETNAME_SONGLISTS"]

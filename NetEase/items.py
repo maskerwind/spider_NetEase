@@ -31,7 +31,6 @@ class SongItem(scrapy.Item):
     SongID = scrapy.Field()
     Song_Name = scrapy.Field()
     Song_Link = scrapy.Field()
-    Song_Duration = scrapy.Field()
     Song_Singer = scrapy.Field()
     Song_lyrics = scrapy.Field()
     Song_Ablum = scrapy.Field()

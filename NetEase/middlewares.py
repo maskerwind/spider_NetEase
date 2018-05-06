@@ -114,19 +114,22 @@ class NeteaseDownloaderMiddleware(object):
 class PhantomJSMiddleware(object):
     @classmethod
     def process_request(cls, request, spider):
-        if request.meta.has_key('PhantomJS'):
-            driver = webdriver.PhantomJS()
-            print('PhantomJS started')
-            #driver = webdriver.Chrome("E:\\Chromedriver\\chromedriver_win32\\chromedriver.exe")
-            driver.get(request.url)
-            driver.switch_to.frame('g_iframe')  # 移动到 iframe
-            # try :
-            #     print(driver.find_element_by_xpath('//a[@id="flag_ctrl"]').text)
-            #     driver.find_element_by_xpath('//a[@id="flag_ctrl"]').click()
-            #     print(driver.find_element_by_xpath('//a[@id="flag_ctrl"]').text)
-            # except:
-            #     pass
-            content = driver.page_source.encode('utf-8')
-            driver.quit()
-            print('PhantomJS stopped')
-            return HtmlResponse(request.url, encoding='utf-8', body=content, request=request)
+        # if request.meta.has_key('PhantomJS'):
+        #     driver = webdriver.PhantomJS()
+        #     print('PhantomJS started')
+        #     #driver = webdriver.Chrome("E:\\Chromedriver\\chromedriver_win32\\chromedriver.exe")
+        #     driver.get(request.url)
+        #     driver.switch_to.frame('g_iframe')  # move to iframe
+        #     content = driver.page_source.encode('utf-8')
+        #     driver.quit()
+        #     print('PhantomJS stopped')
+        #     return HtmlResponse(request.url, encoding='utf-8', body=content, request=request)
+        driver = webdriver.PhantomJS()
+        print('PhantomJS started')
+        # driver = webdriver.Chrome("E:\\Chromedriver\\chromedriver_win32\\chromedriver.exe")
+        driver.get(request.url)
+        driver.switch_to.frame('g_iframe')  # move to iframe
+        content = driver.page_source.encode('utf-8')
+        driver.quit()
+        print('PhantomJS stopped')
+        return HtmlResponse(request.url, encoding='utf-8', body=content, request=request)
